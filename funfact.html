@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fun Facts About Me!</title>
+<style>
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f0f0f0; 
+  }
+
+  button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  #factDisplay {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+</style>
+</head>
+<body>
+  <h1>Discover Fun Facts About Me!</h1>
+  <button id="generateFact">Generate Fact</button>
+  <p id="factDisplay"></p>
+
+  <script>
+    const facts = [
+      "I can say the alphabet backwards.",
+      "My favorite ice cream flavor is [Your Favorite].",
+      "I once met [Famous Person].",
+      "My dream job is to be a [Dream Job].",
+      // Add more fun facts about yourself
+    ];
+
+    const factDisplay = document.getElementById("factDisplay");
+    const generateFactButton = document.getElementById("generateFact");
+
+    generateFactButton.addEventListener("click", () => {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      factDisplay.textContent = facts[randomIndex];
+    });
+  </script>
+</body>
+</html>
